@@ -15,35 +15,41 @@ import {
   TrendingUp,
   Globe2,
   Building2,
-  Briefcase
+  Briefcase,
+  ComputerIcon
 } from 'lucide-react';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 
 export function Home() {
-  const topColleges = [
-    {
-      name: 'Indian Institute of Technology (IIT)',
-      location: 'Multiple Locations',
-      image: 'https://images.unsplash.com/photo-1569653402334-2e98fbaa80ee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlbmdpbmVlcmluZyUyMGNvbGxlZ2UlMjBidWlsZGluZyUyMGluZGlhfGVufDF8fHx8MTc3NDA3OTM3Nnww&ixlib=rb-4.1.0&q=80&w=1080',
-    },
-    {
-      name: 'All India Institute of Medical Sciences (AIIMS)',
-      location: 'Multiple Locations',
-      image: 'https://images.unsplash.com/photo-1590579491624-f98f36d4c763?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx1bml2ZXJzaXR5JTIwY2FtcHVzJTIwZWR1Y2F0aW9ufGVufDF8fHx8MTc3Mzk5NjcwM3ww&ixlib=rb-4.1.0&q=80&w=1080',
-    },
-    {
-      name: 'Indian Institute of Management (IIM)',
-      location: 'Multiple Locations',
-      image: 'https://images.unsplash.com/photo-1770115499876-b2c8e2f6b050?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMHNjaG9vbCUyMGNhbXB1cyUyMGJ1aWxkaW5nfGVufDF8fHx8MTc3NDA3OTM3Nnww&ixlib=rb-4.1.0&q=80&w=1080',
-    },
-    {
-      name: 'National Institute of Technology (NIT)',
-      location: 'Multiple Locations',
-      image: 'https://images.unsplash.com/photo-1637433496890-ee4eb1aecf4e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB1bml2ZXJzaXR5JTIwYnVpbGRpbmd8ZW58MXx8fHwxNzc0MDAyMTc1fDA&ixlib=rb-4.1.0&q=80&w=1080',
-    },
-  ];
+  // const topColleges = [
+  //   {
+  //     name: 'Indian Institute of Technology (IIT)',
+  //     location: 'Multiple Locations',
+  //     image: 'https://images.unsplash.com/photo-1569653402334-2e98fbaa80ee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlbmdpbmVlcmluZyUyMGNvbGxlZ2UlMjBidWlsZGluZyUyMGluZGlhfGVufDF8fHx8MTc3NDA3OTM3Nnww&ixlib=rb-4.1.0&q=80&w=1080',
+  //   },
+  //   {
+  //     name: 'All India Institute of Medical Sciences (AIIMS)',
+  //     location: 'Multiple Locations',
+  //     image: 'https://images.unsplash.com/photo-1590579491624-f98f36d4c763?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx1bml2ZXJzaXR5JTIwY2FtcHVzJTIwZWR1Y2F0aW9ufGVufDF8fHx8MTc3Mzk5NjcwM3ww&ixlib=rb-4.1.0&q=80&w=1080',
+  //   },
+  //   {
+  //     name: 'Indian Institute of Management (IIM)',
+  //     location: 'Multiple Locations',
+  //     image: 'https://images.unsplash.com/photo-1770115499876-b2c8e2f6b050?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMHNjaG9vbCUyMGNhbXB1cyUyMGJ1aWxkaW5nfGVufDF8fHx8MTc3NDA3OTM3Nnww&ixlib=rb-4.1.0&q=80&w=1080',
+  //   },
+  //   {
+  //     name: 'National Institute of Technology (NIT)',
+  //     location: 'Multiple Locations',
+  //     image: 'https://images.unsplash.com/photo-1637433496890-ee4eb1aecf4e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB1bml2ZXJzaXR5JTIwYnVpbGRpbmd8ZW58MXx8fHwxNzc0MDAyMTc1fDA&ixlib=rb-4.1.0&q=80&w=1080',
+  //   },
+  // ];
 
   const services = [
+    {
+      icon: <Globe2 className="size-16 text-orange-500" />,
+      title: 'Study Abroad',
+      description: 'Expert consultation for students planning to pursue higher education in foreign universities.',
+    },
     {
       icon: <Target className="size-16 text-orange-500" />,
       title: 'Career Counseling',
@@ -64,11 +70,7 @@ export function Home() {
       title: 'Entrance Exam Coaching',
       description: 'Comprehensive coaching for JEE, NEET, CAT, CLAT and other competitive entrance examinations.',
     },
-    {
-      icon: <Globe2 className="size-16 text-orange-500" />,
-      title: 'Study Abroad',
-      description: 'Expert consultation for students planning to pursue higher education in foreign universities.',
-    },
+    
     {
       icon: <Award className="size-16 text-orange-500" />,
       title: 'Scholarship Guidance',
@@ -82,29 +84,30 @@ export function Home() {
     { name: 'Management (MBA/BBA)', icon: <Briefcase className="size-8" /> },
     { name: 'Law (LLB)', icon: <FileText className="size-8" /> },
     { name: 'Arts & Humanities', icon: <BookOpen className="size-8" /> },
+    { name: 'BCA & MCA', icon: <ComputerIcon className="size-8" /> },
     { name: 'Commerce', icon: <TrendingUp className="size-8" /> },
   ];
 
   const testimonials = [
     {
       name: 'Rajesh Kumar',
-      college: 'IIT Delhi',
+      college: 'Patna Bihar',
       course: 'B.Tech Computer Science',
-      text: 'EduCare made my dream of getting into IIT a reality. Their guidance was invaluable throughout my preparation journey.',
+  text: 'Edupath Solutions made my dream of getting into ITS Engineering College a reality. Their guidance was invaluable throughout my preparation journey.',
       rating: 5,
     },
     {
       name: 'Priya Sharma',
-      college: 'AIIMS Mumbai',
+      college: 'Motihari Bihar',
       course: 'MBBS',
-      text: 'The counselors at EduCare are extremely knowledgeable and supportive. They helped me at every step of the admission process.',
+  text: 'The counselors at Edupath Solutions are extremely knowledgeable and supportive. They helped me at every step of the admission process.',
       rating: 5,
     },
     {
       name: 'Aditya Singh',
-      college: 'IIM Bangalore',
+      college: 'Sitamarhi Bihar',
       course: 'MBA',
-      text: 'From entrance exam prep to final admission, EduCare was with me throughout. Highly recommended for aspiring students.',
+  text: 'From entrance exam prep to final admission, Edupath Solutions was with me throughout. Highly recommended for aspiring students.',
       rating: 5,
     },
   ];
@@ -164,7 +167,7 @@ export function Home() {
               <div className="text-sm opacity-90">Success Rate</div>
             </div>
             <div>
-              <div className="text-4xl font-bold mb-1">15+</div>
+              <div className="text-4xl font-bold mb-1">9+</div>
               <div className="text-sm opacity-90">Years Experience</div>
             </div>
           </div>
@@ -177,11 +180,11 @@ export function Home() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                Welcome to <span className="text-orange-500">EduCare Consultancy</span>
+                Welcome to <span className="text-orange-500">Edupath Solutions Consultancy</span>
               </h2>
               <p className="text-lg text-gray-700 mb-6">
                 We are one of India's leading educational consultancy services, dedicated to helping students 
-                achieve their academic and career goals. With over 15 years of experience, we have successfully 
+                achieve their academic and career goals. With over 9 years of experience, we have successfully 
                 guided thousands of students to their dream colleges and universities.
               </p>
               <p className="text-lg text-gray-700 mb-6">
@@ -287,7 +290,7 @@ export function Home() {
       </section>
 
       {/* Top Colleges Section */}
-      <section className="py-20 bg-gray-50">
+      {/* <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
@@ -323,9 +326,9 @@ export function Home() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
-      {/* Testimonials Section */}
+    
       <section className="py-20 bg-blue-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -371,7 +374,7 @@ export function Home() {
               className="bg-white text-orange-500 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg inline-flex items-center justify-center gap-2"
             >
               <Phone className="size-5" />
-              Call Now: +91 98765 43210
+              Call Now: +91 8210833946
             </Link>
             <Link
               to="/contact"

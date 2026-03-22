@@ -24,15 +24,15 @@ export function Navbar() {
             <div className="flex items-center gap-6">
               <div className="flex items-center gap-2">
                 <Phone className="size-4" />
-                <span>+91 98765 43210</span>
+                <span>+91 8210833946</span>
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="size-4" />
-                <span>info@educare.in</span>
+                <span>Solutionedupath@gmail.com</span>
               </div>
             </div>
             <div>
-              <span>📍 Mumbai | Delhi | Bangalore</span>
+              <span>📍 Patna | Bihar | India</span>
             </div>
           </div>
         </div>
@@ -44,12 +44,12 @@ export function Navbar() {
           <div className="flex justify-between items-center h-20">
             {/* Logo */}
             <Link to="/" className="flex items-center gap-3">
-              <div className="bg-orange-500 p-2 rounded-lg">
-                <GraduationCap className="size-8 text-white" />
+              <div className="bg-orange-100 p-2 rounded-lg">
+                <img src="/src/app/assets/logo.png" alt="Edupath Solutions" className="size-12 text-white" />
               </div>
               <div>
-                <div className="font-bold text-2xl text-gray-900">EduCare</div>
-                <div className="text-xs text-gray-600">Consultancy Services</div>
+                <div className="font-bold text-2xl text-gray-900">Edupath Solutions</div>
+                <div className="text-xs text-gray-600">सही राह, उज्जवल भविष्य</div>
               </div>
             </Link>
 

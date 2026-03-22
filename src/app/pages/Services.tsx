@@ -170,7 +170,7 @@ export function Services() {
                 <div className="border-t pt-6 mt-6">
                   <div className="flex items-center justify-between mb-4">
                     <span className="text-sm text-gray-600">Starting from</span>
-                    <span className="text-2xl font-bold text-orange-500">{service.price}</span>
+                    {/* <span className="text-2xl font-bold text-orange-500">{service.price}</span> */}
                   </div>
                   <Link
                     to="/contact"
@@ -191,7 +191,7 @@ export function Services() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                Why Choose <span className="text-orange-500">EduCare?</span>
+                Why Choose <span className="text-orange-500">Edupath Solutions?</span>
               </h2>
               <p className="text-lg text-gray-700 mb-8">
                 We are committed to providing the best educational guidance to help students achieve their academic goals and career aspirations.

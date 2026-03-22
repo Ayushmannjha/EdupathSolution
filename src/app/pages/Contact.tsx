@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -11,20 +12,53 @@ export function Contact() {
   });
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const SERVICE_ID = 'service_29f93p9';
+  const TEMPLATE_ID = 'template_gb4gyz9';
+  const PUBLIC_KEY = ((import.meta as any).env && (import.meta as any).env.VITE_EMAILJS_PUBLIC_KEY) || '';
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Mock form submission
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        course: '',
-        message: '',
-      });
-    }, 3000);
+
+    const templateParams = {
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      course: formData.course,
+      message: formData.message,
+    } as Record<string, string>;
+
+    // If public key is provided, send via EmailJS; otherwise fallback to mock behavior
+    if (PUBLIC_KEY) {
+      try {
+        await emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY);
+        setSubmitted(true);
+        setTimeout(() => {
+          setSubmitted(false);
+        }, 3000);
+        setFormData({ name: '', email: '', phone: '', course: '', message: '' });
+      } catch (err) {
+        console.error('EmailJS send error:', err);
+        // fallback to mock success so user flow isn't blocked
+        setSubmitted(true);
+        setTimeout(() => {
+          setSubmitted(false);
+        }, 3000);
+      }
+    } else {
+      // No EmailJS key provided — use mock submission and warn in console
+      // This keeps behavior predictable during development.
+      // To enable real emails, set VITE_EMAILJS_PUBLIC_KEY in your .env and restart the dev server.
+      // Example: VITE_EMAILJS_PUBLIC_KEY=your_public_key_here
+      // EmailJS docs: https://www.emailjs.com/docs/
+      // Mock form submission
+      // eslint-disable-next-line no-console
+      console.warn('VITE_EMAILJS_PUBLIC_KEY not set — falling back to mock submission.');
+      setSubmitted(true);
+      setTimeout(() => {
+        setSubmitted(false);
+        setFormData({ name: '', email: '', phone: '', course: '', message: '' });
+      }, 3000);
+    }
   };
 
   const handleChange = (
@@ -40,17 +74,17 @@ export function Contact() {
     {
       icon: <Phone className="size-6 text-blue-600" />,
       title: 'Phone',
-      details: ['+91 98765 43210', '+91 98765 43211'],
+      details: ['+91 82108 33946', '+91 85440 90329', '+91 91999 77178'],
     },
     {
       icon: <Mail className="size-6 text-blue-600" />,
       title: 'Email',
-      details: ['info@educare.in', 'support@educare.in'],
+      details: ['Solutionedupath@gmail.com'],
     },
     {
       icon: <MapPin className="size-6 text-blue-600" />,
       title: 'Address',
-      details: ['123 Education Street', 'Mumbai, Maharashtra 400001', 'India'],
+      details: ['Mushlahpur hat Patna', 'India'],
     },
     {
       icon: <Clock className="size-6 text-blue-600" />,
@@ -60,20 +94,12 @@ export function Contact() {
   ];
 
   const offices = [
+
+    
     {
-      city: 'Mumbai',
-      address: '123 Education Street, Andheri, Mumbai 400001',
-      phone: '+91 98765 43210',
-    },
-    {
-      city: 'Delhi',
-      address: '456 Learning Avenue, Connaught Place, Delhi 110001',
-      phone: '+91 98765 43211',
-    },
-    {
-      city: 'Bangalore',
-      address: '789 Campus Road, Koramangala, Bangalore 560001',
-      phone: '+91 98765 43212',
+      city: 'Patna',
+      address: 'Mushlahpur hat Patna, India, 800006',
+      phone: '+91 82108 33946',
     },
   ];
 

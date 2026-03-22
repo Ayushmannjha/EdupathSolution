@@ -9,16 +9,17 @@ export function Footer() {
           {/* Company Info */}
           <div>
             <div className="flex items-center gap-3 mb-6">
-              <div className="bg-orange-500 p-2 rounded-lg">
-                <GraduationCap className="size-8 text-white" />
+              <div className="bg-orange-100 p-2 rounded-lg">
+                <img src="/src/app/assets/logo.png" alt="Edupath Solutions" className="size-12 text-white" />
               </div>
               <div>
-                <div className="font-bold text-xl text-white">EduCare</div>
-                <div className="text-xs text-gray-400">Consultancy Services</div>
+                <div className="font-bold text-xl text-white">Edupath Solutions</div>
+                 <div className="text-xs text-gray-400">सही राह, उज्जवल भविष्य</div>
+                
               </div>
             </div>
             <p className="text-sm mb-6 text-gray-400">
-              Leading educational consultancy in India, helping students achieve their academic dreams since 2011.
+              Leading educational consultancy in India, helping students achieve their academic dreams since 2017.
             </p>
             <div className="flex gap-3">
               <a href="#" className="bg-gray-800 p-2 rounded-lg hover:bg-orange-500 transition-colors">
@@ -109,19 +110,20 @@ export function Footer() {
                 <MapPin className="size-5 shrink-0 mt-0.5 text-orange-500" />
                 <div>
                   <div className="font-semibold text-white mb-1">Head Office:</div>
-                  <span>123 Education Street, Andheri, Mumbai, Maharashtra 400001</span>
+                  <span>Mushlahpur hat Patna, India, 800006</span>
                 </div>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="size-5 text-orange-500" />
                 <div>
-                  <div>+91 98765 43210</div>
-                  <div>+91 98765 43211</div>
+                  <div>+91 8210833946</div>
+                  <div>+91 8544090329</div>
+                  <div>+91 9199977178</div>
                 </div>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="size-5 text-orange-500" />
-                <span>info@educare.in</span>
+                <span>Solutionedupath@gmail.com</span>
               </li>
             </ul>
           </div>
@@ -129,7 +131,7 @@ export function Footer() {
 
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
-            <p>&copy; {new Date().getFullYear()} EduCare Consultancy. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} Edupath Solutions Consultancy. All rights reserved.</p>
             <div className="flex gap-6">
               <a href="#" className="hover:text-orange-500 transition-colors">Privacy Policy</a>
               <a href="#" className="hover:text-orange-500 transition-colors">Terms of Service</a>

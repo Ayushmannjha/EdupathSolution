@@ -14,7 +14,7 @@ import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 
 export function About() {
   const stats = [
-    { number: '15+', label: 'Years of Excellence', icon: <Award className="size-8" /> },
+    { number: '9+', label: 'Years of Excellence', icon: <Award className="size-8" /> },
     { number: '5000+', label: 'Students Guided', icon: <Users className="size-8" /> },
     { number: '500+', label: 'Partner Colleges', icon: <Target className="size-8" /> },
     { number: '95%', label: 'Success Rate', icon: <TrendingUp className="size-8" /> },
@@ -47,32 +47,32 @@ export function About() {
     },
   ];
 
-  const team = [
-    {
-      name: 'Dr. Rajesh Kumar',
-      role: 'Founder & CEO',
-      qualification: 'Ph.D. in Education',
-      experience: '20+ years',
-    },
-    {
-      name: 'Priya Menon',
-      role: 'Head of Counseling',
-      qualification: 'M.A. in Psychology',
-      experience: '15+ years',
-    },
-    {
-      name: 'Amit Sharma',
-      role: 'Career Consultant',
-      qualification: 'MBA, Career Coach',
-      experience: '12+ years',
-    },
-    {
-      name: 'Sneha Desai',
-      role: 'Study Abroad Specialist',
-      qualification: 'M.Ed., International Education',
-      experience: '10+ years',
-    },
-  ];
+  // const team = [
+  //   {
+  //     name: 'Dr. Rajesh Kumar',
+  //     role: 'Founder & CEO',
+  //     qualification: 'Ph.D. in Education',
+  //     experience: '20+ years',
+  //   },
+  //   {
+  //     name: 'Priya Menon',
+  //     role: 'Head of Counseling',
+  //     qualification: 'M.A. in Psychology',
+  //     experience: '15+ years',
+  //   },
+  //   {
+  //     name: 'Amit Sharma',
+  //     role: 'Career Consultant',
+  //     qualification: 'MBA, Career Coach',
+  //     experience: '12+ years',
+  //   },
+  //   {
+  //     name: 'Sneha Desai',
+  //     role: 'Study Abroad Specialist',
+  //     qualification: 'M.Ed., International Education',
+  //     experience: '10+ years',
+  //   },
+  // ];
 
   const achievements = [
     '5000+ students successfully placed',
@@ -95,10 +95,10 @@ export function About() {
           />
           <div className="absolute inset-0 bg-blue-900/80"></div>
         </div>
-        <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
-          <h1 className="text-5xl font-bold mb-4">About EduCare</h1>
+          <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
+          <h1 className="text-5xl font-bold mb-4">About Edupath Solutions</h1>
           <p className="text-xl">
-            Empowering students to achieve their educational dreams since 2011
+            Empowering students to achieve their educational dreams since 2017
           </p>
         </div>
       </section>
@@ -128,11 +128,11 @@ export function About() {
               </h2>
               <div className="space-y-4 text-lg text-gray-700">
                 <p>
-                  Founded in 2011, EduCare Consultancy was born from a simple yet powerful vision: 
+                  Founded in 2017, Edupath Solutions Consultancy was born from a simple yet powerful vision: 
                   to help every student find their ideal educational path and achieve their dreams.
                 </p>
                 <p>
-                  Over the past 15 years, we have grown from a small consulting firm to one of 
+                  Over the past 9 years, we have grown from a small consulting firm to one of 
                   India's most trusted educational consultancies, successfully guiding over 5,000 students to 
                   their dream colleges and careers.
                 </p>
@@ -236,7 +236,7 @@ export function About() {
         </div>
       </section>
 
-      {/* Team Section */}
+      {/* Team Section
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -270,7 +270,7 @@ export function About() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <section className="py-20 bg-orange-500">
