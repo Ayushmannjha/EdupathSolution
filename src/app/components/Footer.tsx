@@ -10,7 +10,7 @@ export function Footer() {
           <div>
             <div className="flex items-center gap-3 mb-6">
               <div className="bg-orange-100 p-2 rounded-lg">
-                <img src="/src/app/assets/logo.png" alt="Edupath Solutions" className="size-12 text-white" />
+                <img src="/logo.png" alt="Edupath Solutions" className="size-12 text-white" />
               </div>
               <div>
                 <div className="font-bold text-xl text-white">Edupath Solutions</div>
