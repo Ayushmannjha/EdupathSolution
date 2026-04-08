@@ -110,15 +110,14 @@ export function Footer() {
                 <MapPin className="size-5 shrink-0 mt-0.5 text-orange-500" />
                 <div>
                   <div className="font-semibold text-white mb-1">Head Office:</div>
-                  <span>Mushlahpur hat Patna, India, 800006</span>
+                  <span>HEAD Office: 5th Floor, Block A, Mauryalok Complex, Patna  
+                    BRANCH Office: Rampur Road, Bazaar Samiti, Patna – 800006</span>
                 </div>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="size-5 text-orange-500" />
                 <div>
                   <div>+91 8210833946</div>
-                  <div>+91 8544090329</div>
-                  <div>+91 9199977178</div>
                 </div>
               </li>
               <li className="flex items-center gap-3">

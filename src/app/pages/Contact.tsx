@@ -74,7 +74,7 @@ export function Contact() {
     {
       icon: <Phone className="size-6 text-blue-600" />,
       title: 'Phone',
-      details: ['+91 82108 33946', '+91 85440 90329', '+91 91999 77178'],
+      details: ['+91 82108 33946'],
     },
     {
       icon: <Mail className="size-6 text-blue-600" />,
@@ -84,7 +84,7 @@ export function Contact() {
     {
       icon: <MapPin className="size-6 text-blue-600" />,
       title: 'Address',
-      details: ['Mushlahpur hat Patna', 'India'],
+      details: ['HEAD Office: 5th Floor, Block A, Mauryalok Complex, Patna BRANCH Office: Rampur Road, Bazaar Samiti, Patna – 800006', 'India'],
     },
     {
       icon: <Clock className="size-6 text-blue-600" />,
@@ -98,7 +98,7 @@ export function Contact() {
     
     {
       city: 'Patna',
-      address: 'Mushlahpur hat Patna, India, 800006',
+      address: 'HEAD Office: 5th Floor, Block A, Mauryalok Complex, Patna  BRANCH Office: Rampur Road, Bazaar Samiti, Patna – 800006',
       phone: '+91 82108 33946',
     },
   ];
